@@ -4,10 +4,10 @@ jobs:
     
     steps:
       - name: Checar o código
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Configurar Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.8'  # Ou qualquer versão do Python que você queira usar
 
