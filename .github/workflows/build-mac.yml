@@ -19,7 +19,7 @@ jobs:
       - name: Configurar Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'  # Ajuste para a versão que você quiser
+          python-version: '3.8'
 
       - name: Instalar dependências
         run: |
@@ -38,10 +38,11 @@ jobs:
             jogo.py
 
       - name: Verificar conteúdo da pasta dist
-        run: ls -al dist
+        run: |
+          ls -al dist
 
       - name: Fazer upload do executável
         uses: actions/upload-artifact@v2
         with:
           name: jogo-mac
-          path: dist/jogo  # Verifique se esse é o caminho correto para o seu arquivo
+          path: dist/jogo  # Verifique se o caminho está correto
