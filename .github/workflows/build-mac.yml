@@ -37,8 +37,11 @@ jobs:
             --add-data "assets/nave.png:assets" \
             jogo.py
 
+      - name: Verificar conteúdo da pasta dist
+        run: ls -al dist
+
       - name: Fazer upload do executável
         uses: actions/upload-artifact@v2
         with:
           name: jogo-mac
-          path: dist/jogo
+          path: dist/jogo  # Verifique se esse é o caminho correto para o seu arquivo
